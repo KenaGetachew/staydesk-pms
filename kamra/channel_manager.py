@@ -285,11 +285,14 @@ def _find_or_create_guest(name: str, phone: str, email: str) -> str:
 			if g:
 				return g
 	parts = (name or "OTA Guest").split(" ", 1)
-	return frappe.get_doc({
+	guest = frappe.get_doc({
 		"doctype": "Guest", "first_name": parts[0],
 		"last_name": parts[1] if len(parts) > 1 else "",
 		"phone": phone or "", "email": email or "",
-	}).insert(ignore_permissions=True).name
+	})
+	# an OTA booking is never refused over the format of a phone number
+	guest.flags.ignore_phone_rules = True
+	return guest.insert(ignore_permissions=True).name
 
 
 def _reservations_for_booking(property: str, booking_id: str) -> list[dict]:
