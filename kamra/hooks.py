@@ -91,7 +91,12 @@ kamra_localization = {
 	"Malaysia": "kamra.localization.malaysia",
 	"United Arab Emirates": "kamra.localization.uae",
 	"Saudi Arabia": "kamra.localization.saudi",
+	"Ethiopia": "kamra.localization.ethiopia",
 }
+
+# Eval harness checks registered outside the harness file (country packs);
+# each entry is a function that runs its checks
+kamra_eval_checks = ["kamra.localization.ethiopia.evals.run"]
 
 # Served single-page app
 # -----------------------

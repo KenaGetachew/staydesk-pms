@@ -10036,6 +10036,9 @@ def execute():
 		           t217, t260, t261, t262, t263, t264,
 		           t380, t381, t382, t383):
 			fn()
+		# checks a country pack (or another app) registers for itself
+		for path in frappe.get_hooks("kamra_eval_checks") or []:
+			frappe.get_attr(path)()
 	finally:
 		frappe.flags.kamra_checkin_steps_off = False
 		frappe.set_user("Administrator")  # nosemgrep: frappe-setuser -- controlled user context switch; restores the console user after the checks

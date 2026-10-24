@@ -6005,7 +6005,7 @@ def property_locale(property: str):
 	from kamra.localization import front_desk_vocabulary, integrations, pack_for
 	prop = frappe.get_cached_doc("Property", property)
 	pack = pack_for(property)
-	return {**pack.locale(prop), **front_desk_vocabulary(pack),
+	return {**pack.locale(prop), **front_desk_vocabulary(pack, property),
 	        "integrations": integrations(pack),
 	        # the rate the server puts on any food & beverage charge, whatever
 	        # rate the caller picked (_resolve_charge_gst) - so the folio's

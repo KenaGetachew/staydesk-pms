@@ -18,3 +18,8 @@ class Guest(Document):
 		if self.id_issue_date and self.id_expiry_date \
 				and getdate(self.id_expiry_date) < getdate(self.id_issue_date):
 			frappe.throw(_("The ID cannot expire before the day it was issued."))
+		# only a new or changed number is checked - numbers on file stay
+		if self.phone and not self.flags.ignore_phone_rules \
+				and (self.is_new() or self.has_value_changed("phone")):
+			from kamra.localization import validate_phone
+			validate_phone(self.phone)

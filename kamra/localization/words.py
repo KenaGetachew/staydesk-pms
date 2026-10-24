@@ -36,6 +36,7 @@ CURRENCY_WORDS = {
 	"SGD": ("Dollars", "Cents"),
 	"LKR": ("Rupees", "Cents"),
 	"NPR": ("Rupees", "Paisa"),
+	"ETB": ("Birr", "Santim"),
 }
 
 

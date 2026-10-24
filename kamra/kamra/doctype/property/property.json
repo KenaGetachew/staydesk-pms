@@ -23,6 +23,7 @@
   "country",
   "pincode",
   "timezone",
+  "id_types",
   "sb_ops",
   "currency",
   "checkin_time",
@@ -190,6 +191,12 @@
    "fieldname": "timezone",
    "fieldtype": "Data",
    "label": "Timezone"
+  },
+  {
+   "description": "ID types the front desk may record, one per line. Leave empty to use the country's list.",
+   "fieldname": "id_types",
+   "fieldtype": "Small Text",
+   "label": "ID Types"
   },
   {
    "fieldname": "sb_ops",
@@ -688,7 +695,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-10-20 17:00:00.000000",
+ "modified": "2026-10-21 12:00:00.000000",
  "modified_by": "Administrator",
  "module": "Kamra",
  "name": "Property",

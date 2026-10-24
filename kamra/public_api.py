@@ -440,7 +440,7 @@ def precheckin_info(token: str):
 	prop = frappe.get_doc("Property", res.property)
 	guest = frappe.get_doc("Guest", res.guest)
 	from kamra.localization import front_desk_vocabulary, pack_for
-	vocab = front_desk_vocabulary(pack_for(res.property))
+	vocab = front_desk_vocabulary(pack_for(res.property), res.property)
 	return {
 		"ui_locale": _public_locale(res.property),
 		# which IDs this country accepts, and the likely nationality
