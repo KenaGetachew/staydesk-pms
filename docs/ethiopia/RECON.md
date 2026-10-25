@@ -151,7 +151,14 @@ Razorpay checks around line 2783–2880 show the pattern).
 - Frappe v16.25.0 requires **Python 3.14** and **Node ≥ 24**; MariaDB 11.4.
 - Bench layout: `staydesk-ethiopia/frappe-bench`, with `apps/kamra` linked
   to the fork checkout `staydesk-ethiopia/staydesk-pms`.
-- Baseline eval result: _pending – recorded once the dev site is up._
+- Baseline eval result (2026-10-21, `develop` @ `97476cd9`, site
+  `kamra.localhost` with demo seed): **261/261 passed**. The file defines
+  262 `@check` functions; one is not in the run tuple.
+- macOS: `bench init` fails at its last step (writing the backup crontab,
+  `Operation not permitted`). Everything before it completes; dev benches
+  don't need the backup job.
+- Redis for the bench is started from `frappe-bench/config/redis_*.conf`
+  (ports 13000 / 11000).
 
 ## 9. Changes proposed to the plan
 1. **Phase 2 depends on upstream's booking-engine checkout.** Ask upstream
