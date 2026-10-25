@@ -6,7 +6,7 @@ hero:
   text: The hotel PMS agents can actually run
   tagline: Open-source PMS with a governed MCP layer - Claude (or any agent) quotes, books and posts charges as a permission-checked user. Prices stay in code. Every action is audited.
   image:
-    src: /kamra-mark.svg
+    src: /staydesk-mark.svg
     alt: Kamra
   actions:
     - theme: brand

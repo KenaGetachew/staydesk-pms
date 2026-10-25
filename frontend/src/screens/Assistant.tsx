@@ -81,7 +81,7 @@ function AiSetupNotice() {
         Add an AI key to start
       </h2>
       <p className="mt-1 text-sm text-zinc-500">
-        Kamra Agent runs on your own AI account. It takes about two minutes.
+        StayDesk Agent runs on your own AI account. It takes about two minutes.
       </p>
       <ol className="mt-5 space-y-2.5 text-left">
         {SETUP_STEPS.map((step, i) => (

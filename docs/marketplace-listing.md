@@ -173,7 +173,7 @@ Lead with the most legible, "what is this product" shots first.
 
 ## Logo / icon
 
-- **App logo:** `branding/png/kamra-mark-512.png` (square, no wordmark —
+- **App logo:** `branding/png/staydesk-mark-512.png` (square, no wordmark —
   Frappe crops logos into a circle)
 - Desk/app-switcher icon is already wired via `app_logo_url` in `hooks.py`.
 
@@ -232,7 +232,7 @@ In https://frappecloud.com/dashboard → **Marketplace** → **Kamra**:
 1. **Overview** — paste Title, Short description, Long description above
    (re-paste when the feature set changes).
 2. **Category** — switch from **E-Commerce** to **Hospitality** (or Other).
-3. **Logo** — `branding/png/kamra-mark-512.png` (confirm still current).
+3. **Logo** — `branding/png/staydesk-mark-512.png` (confirm still current).
 4. **Screenshots** — the 13 files above, in that order, with captions
    (confirm all are uploaded; the public page should show more than the logo).
 5. **Links** — Support + Privacy are mandatory; fill the rest too.

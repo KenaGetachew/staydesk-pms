@@ -35,7 +35,7 @@ def _set_home_to_kamra():
 	ws = frappe.get_doc("Website Settings")
 	changed = False
 	if not ws.favicon:
-		ws.favicon = "/assets/kamra/kamra-mark.svg"
+		ws.favicon = "/assets/kamra/staydesk-mark.svg"
 		changed = True
 	# Frappe serves www/kamra.py at /kamra; home_page is the route name.
 	if (ws.home_page or "").strip() in ("", "login", "me", "index"):

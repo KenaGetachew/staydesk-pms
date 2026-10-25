@@ -317,7 +317,7 @@ function FixHelp({ check, date }: { check: Check; date: string }) {
           onClick={() => navigate("/assistant", { state: { prompt: fix.ask(check.count, date) } })}
         >
           <Sparkles className="me-1.5 size-3.5" aria-hidden />
-          {t("Ask Kamra Agent to help")}
+          {t("Ask StayDesk Agent to help")}
         </Button>
         <span className="text-xs text-zinc-400">{t("It opens the agent with this check described. You approve what it changes.")}</span>
       </div>

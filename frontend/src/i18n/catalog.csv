@@ -35,11 +35,11 @@
 {n} adult,{n} adult,{n} بالغ,components/BookingDialog.tsx; components/RoomDrawer.tsx,n,translated
 {n} adult{s},{n} adult{s},{n} بالغ{s},components/CheckInDialog.tsx; screens/PublicCheckin.tsx; screens/RegistrationCard.tsx; screens/Today.tsx,n s,translated
 {n} adults,{n} adults,{n} بالغين,components/BookingDialog.tsx; components/RoomDrawer.tsx,n,translated
-{n} already in Kamra (left alone),{n} already in Kamra (left alone),,screens/GoLiveImport.tsx,n,needs_translation
+{n} already in StayDesk (left alone),{n} already in StayDesk (left alone),,screens/GoLiveImport.tsx,n,needs_translation
 {n} attempts,{n} attempts,,screens/settings/WebhooksPage.tsx,n,needs_translation
 {n} bill(s) were taken for a different room than the folio they posted to.,{n} bill(s) were taken for a different room than the folio they posted to.,{n} فاتورة أُخذت لغرفة غير التي رُحّلت إلى فاتورتها.,screens/EndOfDayWizard.tsx,n,translated
 {n} blocker(s),{n} blocker(s),{n} عائق,screens/EndOfDay.tsx; screens/EndOfDayWizard.tsx,n,translated
-"{n} booking(s) imported, {h} as past-stay history, {a} already in Kamra","{n} booking(s) imported, {h} as past-stay history, {a} already in Kamra",,screens/GoLiveImport.tsx,n h a,needs_translation
+"{n} booking(s) imported, {h} as past-stay history, {a} already in StayDesk","{n} booking(s) imported, {h} as past-stay history, {a} already in StayDesk",,screens/GoLiveImport.tsx,n h a,needs_translation
 {n} changeover conflict{s},{n} changeover conflict{s},{n} تعارض تبديل{s},screens/TapeChart.tsx,n s,translated
 {n} child,{n} child,{n} طفل,components/BookingDialog.tsx; components/RoomDrawer.tsx; screens/PublicCheckin.tsx; screens/RegistrationCard.tsx,n,translated
 {n} children,{n} children,{n} أطفال,components/BookingDialog.tsx; components/RoomDrawer.tsx,n,translated
@@ -199,7 +199,7 @@ Advance bill,Advance bill,فاتورة مقدمة,screens/FolioView.tsx,,transla
 Advance paid,Advance paid,الدفعة المقدمة,screens/RegistrationCard.tsx,,translated
 Advance percent,Advance percent,نسبة المقدمة,screens/Setup.tsx,,translated
 Advance Percent,Advance Percent,نسبة الدفعة المقدمة,screens/Setup.tsx,,translated
-"After the desk is live, put an AI concierge on your WhatsApp number - it uses Kamra's tools. Metered by HeyKoala; the PMS stays free.","After the desk is live, put an AI concierge on your WhatsApp number - it uses Kamra's tools. Metered by HeyKoala; the PMS stays free.",,screens/Setup.tsx,,needs_translation
+"After the desk is live, put an AI concierge on your WhatsApp number - it uses StayDesk's tools. Metered by HeyKoala; the PMS stays free.","After the desk is live, put an AI concierge on your WhatsApp number - it uses StayDesk's tools. Metered by HeyKoala; the PMS stays free.",,screens/Setup.tsx,,needs_translation
 Age,Age,العمر,screens/RegistrationCard.tsx; screens/Tickets.tsx,,translated
 "Agreed charge / night, all of them","Agreed charge / night, all of them",,components/BookingDialog.tsx,,needs_translation
 Agrees with folios,Agrees with folios,مطابق للفواتير,screens/AuditPack.tsx,,translated
@@ -288,7 +288,7 @@ Arriving around,Arriving around,موعد الوصول التقريبي,screens/P
 Arriving today,Arriving today,يصل اليوم,components/RoomDrawer.tsx; screens/Rooms.tsx,,translated
 "Ask Finance or a Hotel Admin to override it, take payment from the guest, or have the company settle its account first.","Ask Finance or a Hotel Admin to override it, take payment from the guest, or have the company settle its account first.",اطلب من المالية أو مدير الفندق تجاوز الحظر، أو حصّل المبلغ من الضيف، أو اطلب من الشركة تسوية حسابها أولاً.,components/CheckOutDialog.tsx,,translated
 "Ask if they need anything: an extra bed, a wake-up call, an airport drop.","Ask if they need anything: an extra bed, a wake-up call, an airport drop.",اسأل الضيف إن كان يحتاج شيئا: سريرا إضافيا، أو مكالمة إيقاظ، أو توصيلا إلى المطار.,components/CheckInDialog.tsx,,translated
-Ask Kamra Agent to help,Ask Kamra Agent to help,,screens/EndOfDayWizard.tsx,,needs_translation
+Ask StayDesk Agent to help,Ask StayDesk Agent to help,,screens/EndOfDayWizard.tsx,,needs_translation
 "ask to see, correct or erase your data, or withdraw consent, by contacting {contact}.","ask to see, correct or erase your data, or withdraw consent, by contacting {contact}.",اطلب الاطلاع على بياناتك أو تصحيحها أو حذفها، أو اسحب موافقتك، بالتواصل مع {contact}.,components/PrivacyNotice.tsx,contact,translated
 "ask to see, correct or erase your data, or withdraw consent, by contacting the hotel.","ask to see, correct or erase your data, or withdraw consent, by contacting the hotel.",اطلب الاطلاع على بياناتك أو تصحيحها أو حذفها، أو اسحب موافقتك، بالتواصل مع الفندق.,components/PrivacyNotice.tsx,,translated
 Assign {n} room{s},Assign {n} room{s},تعيين {n} غرفة{s},screens/TapeChart.tsx,n s,translated
@@ -455,7 +455,7 @@ Check out {name},Check out {name},تسجيل مغادرة {name},components/Chec
 Check out a guest,Check out a guest,تسجيل مغادرة ضيف,components/CommandPalette.tsx,,translated
 Check speed,Check speed,,screens/settings/cards.tsx,,needs_translation
 "Check the guest's name and phone, then the ID for the guest and everyone staying. If they checked in online, review what they sent.","Check the guest's name and phone, then the ID for the guest and everyone staying. If they checked in online, review what they sent.",تحقق من اسم الضيف وهاتفه، ثم من هوية الضيف وكل من يقيم معه. إذا سجل الوصول عبر الإنترنت، راجع ما أرسله.,components/CheckInDialog.tsx,,translated
-Check the status of this Kamra site and whether a newer open-source release is available.,Check the status of this Kamra site and whether a newer open-source release is available.,تحقق من حالة موقع كامرا وما إذا كان هناك إصدار مفتوح المصدر أحدث.,screens/SystemHealth.tsx,,translated
+Check the status of this StayDesk site and whether a newer open-source release is available.,Check the status of this StayDesk site and whether a newer open-source release is available.,تحقق من حالة موقع ستاي ديسك وما إذا كان هناك إصدار مفتوح المصدر أحدث.,screens/SystemHealth.tsx,,translated
 check-in,check-in,تسجيل الوصول,components/CommandPalette.tsx,,translated
 Check-in,Check-in,تسجيل الوصول,components/BookingDialog.tsx; screens/CRS.tsx; screens/RegistrationCard.tsx; screens/TapeChart.tsx,,translated
 Check-in opens on the arrival date ({date}).,Check-in opens on the arrival date ({date}).,يتاح تسجيل الوصول في تاريخ الوصول ({date}).,screens/TapeChart.tsx,date,translated
@@ -529,7 +529,7 @@ Company pays,Company pays,الشركة تدفع,components/CheckInDialog.tsx,,tr
 Company pays at check-out,Company pays at check-out,,components/CheckOutDialog.tsx,,needs_translation
 Company rate,Company rate,سعر الشركة,components/BookingDialog.tsx,,translated
 "Company, add-ons & arrival details","Company, add-ons & arrival details",الشركة والإضافات وتفاصيل الوصول,components/BookingDialog.tsx,,translated
-Compares the files loaded in steps 1-3 with what is now in Kamra: counts and totals per category. Go live only when every line matches.,Compares the files loaded in steps 1-3 with what is now in Kamra: counts and totals per category. Go live only when every line matches.,,screens/GoLiveImport.tsx,,needs_translation
+Compares the files loaded in steps 1-3 with what is now in StayDesk: counts and totals per category. Go live only when every line matches.,Compares the files loaded in steps 1-3 with what is now in StayDesk: counts and totals per category. Go live only when every line matches.,,screens/GoLiveImport.tsx,,needs_translation
 complimentary,complimentary,مجاني,components/CheckOutDialog.tsx,,translated
 Complimentary,Complimentary,مجاني,screens/POS.tsx; screens/pos/OpenBillsPopup.tsx; screens/pos/PosSidePanel.tsx; screens/pos/SettleSheet.tsx,,translated
 COMPLIMENTARY,COMPLIMENTARY,مجاني,screens/POS.tsx,,translated
@@ -659,7 +659,7 @@ Dietary needs,Dietary needs,احتياجات غذائية,components/CheckInDial
 Differs,Differs,,screens/GoLiveImport.tsx,,needs_translation
 Differs from folios by {amount},Differs from folios by {amount},يختلف عن الفواتير بمقدار {amount},screens/AuditPack.tsx,amount,translated
 Direct IP,Direct IP,,screens/settings/cards.tsx,,needs_translation
-Direct IP (Kamra on the hotel network),Direct IP (Kamra on the hotel network),,screens/KitchenPrinters.tsx,,needs_translation
+Direct IP (StayDesk on the hotel network),Direct IP (StayDesk on the hotel network),,screens/KitchenPrinters.tsx,,needs_translation
 Dirty,Dirty,متسخة,screens/Dashboard.tsx; screens/Rooms.tsx; screens/Today.tsx,,translated
 Disabled,Disabled,معطّل,screens/CashierBoard.tsx; screens/KitchenPrinters.tsx; screens/settings/cards.tsx,,translated
 Discard,Discard,,screens/settings/ModulePage.tsx,,needs_translation
@@ -730,7 +730,7 @@ Every action is recorded in the Activity Log.,Every action is recorded in the Ac
 "Every action on the property, newest first - who did it and what changed.","Every action on the property, newest first - who did it and what changed.",كل إجراء في المنشأة، الأحدث أولا - من قام به وما الذي تغير.,screens/Agents.tsx,,translated
 "Every app included, plus the AI, channels, payments, accounting and country packs you can plug in.","Every app included, plus the AI, channels, payments, accounting and country packs you can plug in.",كل التطبيقات مشمولة، بالإضافة إلى الذكاء الاصطناعي والقنوات والمدفوعات والمحاسبة وحزم الدول التي يمكنك توصيلها.,screens/Marketplace.tsx,,translated
 Every arrival for this day already has a room.,Every arrival for this day already has a room.,كل وصول لهذا اليوم لديه غرفة بالفعل.,screens/TapeChart.tsx,,translated
-Every file ties to Kamra as of business date {date}. Switch the desk over.,Every file ties to Kamra as of business date {date}. Switch the desk over.,,screens/GoLiveImport.tsx,date,needs_translation
+Every file ties to StayDesk as of business date {date}. Switch the desk over.,Every file ties to StayDesk as of business date {date}. Switch the desk over.,,screens/GoLiveImport.tsx,date,needs_translation
 "Every guest, their stays and lifetime value. Click for the full journey.","Every guest, their stays and lifetime value. Click for the full journey.",كل ضيف وإقاماته وقيمته مدى الحياة. انقر للرحلة الكاملة.,screens/Guests.tsx,,translated
 "Every past bill: search, filter by date, type and payment, and export","Every past bill: search, filter by date, type and payment, and export",كل الفواتير السابقة: ابحث وصفِّ بالتاريخ والنوع والدفع ثم صدّر,screens/POS.tsx,,translated
 Every room,Every room,كل الغرف,components/RoomInsights.tsx,,translated
@@ -741,8 +741,8 @@ Everyone,Everyone,الجميع,screens/Agents.tsx,,translated
 Everyone staying,Everyone staying,كل المقيمين,components/CheckInDialog.tsx,,translated
 Everything came back,Everything came back,عاد كل شيء,screens/Laundry.tsx,,translated
 "Everything else starts at sensible defaults. You will land on a Finish setup list: rooms and rates, the booking page, outlets, tills and your team.","Everything else starts at sensible defaults. You will land on a Finish setup list: rooms and rates, the booking page, outlets, tills and your team.",,screens/Setup.tsx,,needs_translation
-"Everything Kamra does, one room at a time. Pick where you want to work.","Everything Kamra does, one room at a time. Pick where you want to work.",كل ما تفعله كامرا، غرفة بغرفة. اختر أين تريد العمل.,screens/AppLauncher.tsx,,translated
 Everything required is done. Check the guest in.,Everything required is done. Check the guest in.,تم كل ما هو مطلوب. سجل وصول الضيف.,components/CheckInDialog.tsx,,translated
+"Everything StayDesk does, one room at a time. Pick where you want to work.","Everything StayDesk does, one room at a time. Pick where you want to work.",كل ما تفعله ستاي ديسك، غرفة بغرفة. اختر أين تريد العمل.,screens/AppLauncher.tsx,,translated
 Excel,Excel,,screens/pos/PosSidePanel.tsx,,needs_translation
 Exceptions,Exceptions,الاستثناءات,screens/EndOfDay.tsx,,translated
 Exit,Exit,خروج,screens/Kitchen.tsx,,translated
@@ -898,7 +898,7 @@ Holds also show on the Tape Chart and in,Holds also show on the Tape Chart and i
 Home,Home,,AppShell.tsx,,needs_translation
 Hotel,Hotel,فندق,screens/Setup.tsx,,translated
 Hotel default,Hotel default,الإعداد الافتراضي للفندق,components/CustomizeToday.tsx,,translated
-"Hotel or vacation rental - same product, different defaults. Prefer talking? Connect Claude to Kamra's MCP and say ""onboard my property"".","Hotel or vacation rental - same product, different defaults. Prefer talking? Connect Claude to Kamra's MCP and say ""onboard my property"".","فندق أو إيجار عطلات - نفس المنتج بإعدادات افتراضية مختلفة. تفضّل الحديث؟ اربط Claude بـ MCP في كامرا وقل ""onboard my property"".",screens/Setup.tsx,,translated
+"Hotel or vacation rental - same product, different defaults. Prefer talking? Connect Claude to StayDesk's MCP and say ""onboard my property"".","Hotel or vacation rental - same product, different defaults. Prefer talking? Connect Claude to StayDesk's MCP and say ""onboard my property"".","فندق أو إيجار عطلات - نفس المنتج بإعدادات افتراضية مختلفة. تفضّل الحديث؟ اربط Claude بـ MCP في ستاي ديسك وقل ""onboard my property"".",screens/Setup.tsx,,translated
 Hourly,Hourly,بالساعة,screens/TapeChart.tsx,,translated
 house,house,الفندق,screens/Laundry.tsx,,translated
 House (uniforms / linen),House (uniforms / linen),الفندق (زي / بياضات),screens/Laundry.tsx,,translated
@@ -942,13 +942,13 @@ In hand,In hand,في اليد,screens/Laundry.tsx,,translated
 in house,in house,مقيم,components/RoomDrawer.tsx,,translated
 In house,In house,داخل الفندق,screens/Dashboard.tsx,,translated
 "in house, room {n}","in house, room {n}",مقيم، غرفة {n},screens/pos/PosSidePanel.tsx,n,translated
-In Kamra,In Kamra,,screens/GoLiveImport.tsx,,needs_translation
 In kitchen,In kitchen,في المطبخ,screens/POS.tsx; screens/pos/OpenBillsPopup.tsx; screens/pos/PosSidePanel.tsx,,translated
 In kitchen / not settled,In kitchen / not settled,في المطبخ / غير مسددة,screens/POS.tsx,,translated
 in play,in play,قيد التنفيذ,screens/Banquet.tsx,,translated
 in progress at step {n},in progress at step {n},قيد التنفيذ عند الخطوة {n},screens/EndOfDay.tsx,n,translated
 In progress…,In progress…,قيد التنفيذ…,screens/HkApp.tsx,,translated
 "In Razorpay, add a webhook for the payment_link.paid event pointing to","In Razorpay, add a webhook for the payment_link.paid event pointing to",,screens/settings/cards.tsx,,needs_translation
+In StayDesk,In StayDesk,,screens/GoLiveImport.tsx,,needs_translation
 In the room now,In the room now,في الغرفة الآن,components/RoomDrawer.tsx,,translated
 In the safe,In the safe,,screens/CashierBoard.tsx,,needs_translation
 In-house,In-house,داخل الفندق,screens/Dashboard.tsx; screens/Reports.tsx; screens/Today.tsx,,translated
@@ -967,7 +967,7 @@ Invoice cancelled,Invoice cancelled,فاتورة ملغاة,screens/VoidAllowanc
 Invoices,Invoices,الفواتير,components/CheckOutDialog.tsx; components/CommandPalette.tsx,,translated
 Invoices are issued once the guest is checked out.,Invoices are issued once the guest is checked out.,تصدر الفواتير بعد تسجيل مغادرة الضيف.,components/CheckOutDialog.tsx,,translated
 IP address,IP address,,screens/KitchenPrinters.tsx,,needs_translation
-"is live. Bring your bookings, companies and opening balances over from Kamra's CSV templates, then reconcile before you switch - or let the AI migration assistant do the mapping via MCP.","is live. Bring your bookings, companies and opening balances over from Kamra's CSV templates, then reconcile before you switch - or let the AI migration assistant do the mapping via MCP.",,screens/Setup.tsx,,needs_translation
+"is live. Bring your bookings, companies and opening balances over from StayDesk's CSV templates, then reconcile before you switch - or let the AI migration assistant do the mapping via MCP.","is live. Bring your bookings, companies and opening balances over from StayDesk's CSV templates, then reconcile before you switch - or let the AI migration assistant do the mapping via MCP.",,screens/Setup.tsx,,needs_translation
 IT,IT,,screens/settings/SettingsHub.tsx,,needs_translation
 It opens the agent with this check described. You approve what it changes.,It opens the agent with this check described. You approve what it changes.,,screens/EndOfDayWizard.tsx,,needs_translation
 It speeds up arrival. Bring the original card either way.,It speeds up arrival. Bring the original card either way.,تُسرّع الوصول. أحضر البطاقة الأصلية في كل الأحوال.,screens/PublicCheckin.tsx,,translated
@@ -976,16 +976,9 @@ Item,Item,البند,screens/FolioView.tsx; screens/Laundry.tsx,,translated
 Item (Shirt…),Item (Shirt…),البند (قميص…),screens/Laundry.tsx,,translated
 Items,Items,العناصر,screens/POS.tsx; screens/pos/OrderHistory.tsx; screens/pos/PosSidePanel.tsx,,translated
 Journal by kind / mode,Journal by kind / mode,,screens/CashierShiftReport.tsx,,needs_translation
-Kamra {latest} is available - you are on {installed}.,Kamra {latest} is available - you are on {installed}.,كامرا {latest} متاح - أنت على {installed}.,components/UpdateNag.tsx,latest installed,translated
-Kamra Agent → Connect your AI,Kamra Agent → Connect your AI,,screens/settings/cards.tsx,,needs_translation
-"Kamra Agent for staff. Pick a provider, paste the key, Test. Claude Desktop is MCP (Kamra Agent → Connect your AI) - not an Anthropic key in this form.","Kamra Agent for staff. Pick a provider, paste the key, Test. Claude Desktop is MCP (Kamra Agent → Connect your AI) - not an Anthropic key in this form.",,screens/settings/cards.tsx,,needs_translation
-Kamra POSTs a signed JSON event to each endpoint. Failed deliveries are retried for about 8 hours.,Kamra POSTs a signed JSON event to each endpoint. Failed deliveries are retried for about 8 hours.,,screens/settings/WebhooksPage.tsx,,needs_translation
-"Kamra sends the ticket straight to the printer's network address. Only works when the Kamra server is on the same network as the printer, not on a cloud server.","Kamra sends the ticket straight to the printer's network address. Only works when the Kamra server is on the same network as the printer, not on a cloud server.",,screens/KitchenPrinters.tsx,,needs_translation
-Kamra total,Kamra total,,screens/GoLiveImport.tsx,,needs_translation
 Kamra Verify,Kamra Verify,,screens/settings/cards.tsx,,needs_translation
 Kamra Verify checks this tax ID with the tax network. Charged per check to your Kamra Connect wallet.,Kamra Verify checks this tax ID with the tax network. Charged per check to your Kamra Connect wallet.,,screens/FolioView.tsx,,needs_translation
 Kamra Verify reads the ID and fills the profile. Charged per read to your Kamra Connect wallet.,Kamra Verify reads the ID and fills the profile. Charged per read to your Kamra Connect wallet.,,screens/RegistrationCard.tsx,,needs_translation
-Kamra will create a whole-property sellable unit for each listing. You can add physical rooms later for housekeeping if needed.,Kamra will create a whole-property sellable unit for each listing. You can add physical rooms later for housekeeping if needed.,ستنشئ كامرا وحدة قابلة للبيع للعقار بالكامل لكل قائمة. يمكنك إضافة غرف فعلية لاحقاً للتدبير المنزلي إن لزم.,screens/Setup.tsx,,translated
 Keep,Keep,إبقاء,screens/HkApp.tsx,,translated
 Keep part of the security deposit ({held} held) against damage before refunding the rest.,Keep part of the security deposit ({held} held) against damage before refunding the rest.,احتجز جزءاً من مبلغ التأمين ({held} محتجز) مقابل الأضرار قبل رد الباقي.,components/CheckOutDialog.tsx,held,translated
 Keep the booking,Keep the booking,إبقاء الحجز,components/CancelPanel.tsx,,translated
@@ -1863,6 +1856,13 @@ Stay summary,Stay summary,ملخص الإقامة,components/CheckOutDialog.tsx,
 Stay total,Stay total,إجمالي الإقامة,components/CheckInDialog.tsx; components/RoomDrawer.tsx; screens/RegistrationCard.tsx,,translated
 Stay type,Stay type,نوع الإقامة,components/BookingDialog.tsx,,translated
 stay{s},stay{s},إقامة{s},components/BookingDialog.tsx,s,translated
+StayDesk {latest} is available - you are on {installed}.,StayDesk {latest} is available - you are on {installed}.,ستاي ديسك {latest} متاح - أنت على {installed}.,components/UpdateNag.tsx,latest installed,translated
+StayDesk Agent → Connect your AI,StayDesk Agent → Connect your AI,,screens/settings/cards.tsx,,needs_translation
+"StayDesk Agent for staff. Pick a provider, paste the key, Test. Claude Desktop is MCP (StayDesk Agent → Connect your AI) - not an Anthropic key in this form.","StayDesk Agent for staff. Pick a provider, paste the key, Test. Claude Desktop is MCP (StayDesk Agent → Connect your AI) - not an Anthropic key in this form.",,screens/settings/cards.tsx,,needs_translation
+StayDesk POSTs a signed JSON event to each endpoint. Failed deliveries are retried for about 8 hours.,StayDesk POSTs a signed JSON event to each endpoint. Failed deliveries are retried for about 8 hours.,,screens/settings/WebhooksPage.tsx,,needs_translation
+"StayDesk sends the ticket straight to the printer's network address. Only works when the StayDesk server is on the same network as the printer, not on a cloud server.","StayDesk sends the ticket straight to the printer's network address. Only works when the StayDesk server is on the same network as the printer, not on a cloud server.",,screens/KitchenPrinters.tsx,,needs_translation
+StayDesk total,StayDesk total,,screens/GoLiveImport.tsx,,needs_translation
+StayDesk will create a whole-property sellable unit for each listing. You can add physical rooms later for housekeeping if needed.,StayDesk will create a whole-property sellable unit for each listing. You can add physical rooms later for housekeeping if needed.,ستنشئ ستاي ديسك وحدة قابلة للبيع للعقار بالكامل لكل قائمة. يمكنك إضافة غرف فعلية لاحقاً للتدبير المنزلي إن لزم.,screens/Setup.tsx,,translated
 staying over,staying over,مقيم,screens/TapeChart.tsx,,translated
 Stays,Stays,الإقامات,screens/Guests.tsx,,translated
 "Step by step: choose the modules you want, then rooms, rates, and, if you run a restaurant, outlets, stations and tills. Each step asks only what it needs.","Step by step: choose the modules you want, then rooms, rates, and, if you run a restaurant, outlets, stations and tills. Each step asks only what it needs.",,screens/Setup.tsx,,needs_translation
@@ -1937,7 +1937,7 @@ The guest checked in online{when}. Check what they sent against the guest at the
 "The guest folio is closed, so a charge can't be added here. Open the folio.","The guest folio is closed, so a charge can't be added here. Open the folio.",فاتورة الضيف مغلقة، لذا لا يمكن إضافة رسوم هنا. افتح الفاتورة.,components/CheckOutDialog.tsx,,translated
 The guest is in-house: the old room is marked Dirty for housekeeping.,The guest is in-house: the old room is marked Dirty for housekeeping.,النزيل مقيم: تُعلَّم الغرفة السابقة متسخة للتدبير المنزلي.,components/RoomChangeDialog.tsx,,translated
 The guest is owed {amount},The guest is owed {amount},للضيف مستحق قدره {amount},components/CheckOutDialog.tsx,amount,translated
-The guest must know their ID is read by Kamra's verification partner,The guest must know their ID is read by Kamra's verification partner,,screens/RegistrationCard.tsx,,needs_translation
+The guest must know their ID is read by StayDesk's verification partner,The guest must know their ID is read by StayDesk's verification partner,,screens/RegistrationCard.tsx,,needs_translation
 The guest owes {amount},The guest owes {amount},على الضيف {amount},components/CheckOutDialog.tsx,amount,translated
 The guest pays at the outlet. Outlets cannot post to this room.,The guest pays at the outlet. Outlets cannot post to this room.,يدفع الضيف في المنفذ. لا يمكن للمنافذ تحميل رسوم على هذه الغرفة.,components/CheckInDialog.tsx,,translated
 The guest signed the printed card,The guest signed the printed card,وقع الضيف على البطاقة المطبوعة,components/CheckInDialog.tsx,,translated
@@ -1948,7 +1948,6 @@ The high-balance check is off (threshold 0).,The high-balance check is off (thre
 The hotel default is the standard layout again.,The hotel default is the standard layout again.,عاد الإعداد الافتراضي للفندق إلى التخطيط القياسي.,components/CustomizeToday.tsx,,translated
 The hotel keeps a copy of your ID with its registration records.,The hotel keeps a copy of your ID with its registration records.,يحتفظ الفندق بنسخة من هويتك مع سجلات التسجيل.,components/PrivacyNotice.tsx,,translated
 "The hotel's billing rules pick the folio, and food and drink take the hotel's food tax rate.","The hotel's billing rules pick the folio, and food and drink take the hotel's food tax rate.",قواعد الفوترة في الفندق تختار الفاتورة، والطعام والشراب يأخذان نسبة ضريبة الطعام في الفندق.,components/RoomStayPanels.tsx,,translated
-The Kamra version this site is running,The Kamra version this site is running,,AppShell.tsx,,needs_translation
 "The kitchen already has {n} item(s). They are voided, not deleted: the kitchen is told to stop, and a supervisor approves.","The kitchen already has {n} item(s). They are voided, not deleted: the kitchen is told to stop, and a supervisor approves.",لدى المطبخ {n} صنف بالفعل. تُبطل ولا تُحذف: يُبلَّغ المطبخ بالتوقف، ويوافق مشرف.,screens/pos/VoidApproval.tsx,n,translated
 The online booking page can run alongside a channel manager or on its own.,The online booking page can run alongside a channel manager or on its own.,,screens/Setup.tsx,,needs_translation
 The OTA paid the room and nothing is held for extras. Blocking charges to the room is safer.,The OTA paid the room and nothing is held for extras. Blocking charges to the room is safer.,دفعت وكالة الحجز ثمن الغرفة ولا يوجد مبلغ محجوز للإضافات. منع الرسوم على الغرفة أكثر أمانا.,components/CheckInDialog.tsx,,translated
@@ -1957,6 +1956,7 @@ The OTA paid the room and nothing is held for extras. Blocking charges to the ro
 The rest printed here.,The rest printed here.,طُبع الباقي هنا.,screens/POS.tsx,,translated
 The room is still occupied. Check the current guest out first.,The room is still occupied. Check the current guest out first.,الغرفة ما زالت مشغولة. سجّل مغادرة النزيل الحالي أولًا.,components/RoomDrawer.tsx,,translated
 The slot must end after it starts.,The slot must end after it starts.,يجب أن تنتهي الفترة بعد بدايتها.,components/BookingDialog.tsx,,translated
+The StayDesk version this site is running,The StayDesk version this site is running,,AppShell.tsx,,needs_translation
 The whole portfolio at a glance.,The whole portfolio at a glance.,المحفظة بالكامل بنظرة واحدة.,screens/Dashboard.tsx,,translated
 Their PIN,Their PIN,رمزه,screens/pos/VoidApproval.tsx,,translated
 Theme,Theme,المظهر,AppShell.tsx; screens/settings/cards.tsx,,translated
@@ -2119,7 +2119,7 @@ What was done? (kept with the ticket),What was done? (kept with the ticket),,scr
 What you agreed for them,What you agreed for them,,components/BookingDialog.tsx,,needs_translation
 WhatsApp,WhatsApp,واتساب,screens/WhatsAppChat.tsx,,translated
 When,When,متى,screens/Agents.tsx; screens/CashierTill.tsx; screens/VoidAllowanceReport.tsx,,translated
-"When off, phone and ID numbers in tool results are shortened to the last four digits before they leave Kamra.","When off, phone and ID numbers in tool results are shortened to the last four digits before they leave Kamra.",,screens/settings/cards.tsx,,needs_translation
+"When off, phone and ID numbers in tool results are shortened to the last four digits before they leave StayDesk.","When off, phone and ID numbers in tool results are shortened to the last four digits before they leave StayDesk.",,screens/settings/cards.tsx,,needs_translation
 "When the guest pays, the deposit posts here automatically.","When the guest pays, the deposit posts here automatically.",عند دفع النزيل، يُسجَّل العربون هنا تلقائيًا.,components/DepositPanel.tsx,,translated
 Where,Where,,screens/pos/PosSidePanel.tsx,,needs_translation
 Where a ticket goes if this printer fails.,Where a ticket goes if this printer fails.,,screens/KitchenPrinters.tsx,,needs_translation
@@ -2134,7 +2134,7 @@ Who cleaned it,Who cleaned it,من نظّفها,components/RoomDrawer.tsx,,trans
 Who has it,Who has it,,screens/Tickets.tsx,,needs_translation
 Who is this bill for?,Who is this bill for?,لمن هذه الفاتورة؟,screens/pos/PosSidePanel.tsx,,translated
 Who pays,Who pays,من يدفع,components/CheckInDialog.tsx; components/CheckOutDialog.tsx; screens/settings/cards.tsx,,translated
-"Who signed in to and out of Kamra, newest first.","Who signed in to and out of Kamra, newest first.",من سجل الدخول إلى كمرة والخروج منها، الأحدث أولا.,screens/Agents.tsx,,translated
+"Who signed in to and out of StayDesk, newest first.","Who signed in to and out of StayDesk, newest first.",من سجل الدخول إلى ستاي ديسك والخروج منها، الأحدث أولا.,screens/Agents.tsx,,translated
 Who stayed here,Who stayed here,من أقام هنا,components/RoomDrawer.tsx,,translated
 Whole place: rooms {rooms},Whole place: rooms {rooms},المكان بالكامل: الغرف {rooms},components/CheckInDialog.tsx,rooms,translated
 Whose function is this?,Whose function is this?,لمن هذه المناسبة؟,screens/Banquet.tsx,,translated

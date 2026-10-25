@@ -499,7 +499,7 @@ def _html_shell(title: str, body: str) -> str:
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{frappe.utils.escape_html(title)} · Kamra</title>
+<title>{frappe.utils.escape_html(title)} · StayDesk</title>
 <style>
   :root {{ color-scheme: light; }}
   body {{ margin:0; font: 16px/1.45 ui-sans-serif, system-ui, sans-serif;
@@ -512,9 +512,9 @@ def _html_shell(title: str, body: str) -> str:
   select {{ width:100%; padding:.55rem .7rem; border:1px solid #ccc; border-radius:8px; }}
   .row {{ display:flex; gap:.6rem; margin-top: 1.25rem; }}
   button {{ flex:1; padding:.7rem 1rem; border:0; border-radius:999px;
-            background:#1E7B4F; color:#fff; font-weight:600; cursor:pointer; }}
+            background:#0D5C63; color:#fff; font-weight:600; cursor:pointer; }}
   button.ghost {{ background:#fff; color:#333; border:1px solid #ccc; }}
-  a {{ color:#1E7B4F; }}
+  a {{ color:#0D5C63; }}
 </style>
 </head>
 <body><main><h1>{frappe.utils.escape_html(title)}</h1>{body}</main></body>

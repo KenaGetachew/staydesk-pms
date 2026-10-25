@@ -41,11 +41,11 @@ export default defineConfig({
     /^https?:\/\/127\.0\.0\.1/,
     /^https?:\/\/kamra\.localhost/,
   ],
-  head: [["link", { rel: "icon", type: "image/svg+xml", href: `${base}kamra-mark.svg` }]],
+  head: [["link", { rel: "icon", type: "image/svg+xml", href: `${base}staydesk-mark.svg` }]],
   themeConfig: {
     logo: {
-      light: "/kamra-horizontal.svg",
-      dark: "/kamra-horizontal-white.svg",
+      light: "/staydesk-horizontal.svg",
+      dark: "/staydesk-horizontal-white.svg",
       alt: "Kamra PMS",
       height: 28,
     },

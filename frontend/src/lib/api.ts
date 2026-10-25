@@ -43,7 +43,7 @@ async function doFetch(path: string, init?: RequestInit) {
       console.warn(`[kamra] network failure calling ${path}`, err)
       window.dispatchEvent(new Event("kamra:offline"))
       throw Object.assign(
-        new Error("Can't reach Kamra right now. Check your connection - we'll reconnect automatically."),
+        new Error("Can't reach StayDesk right now. Check your connection - we'll reconnect automatically."),
         { network: true },
       )
     }

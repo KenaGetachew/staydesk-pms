@@ -441,7 +441,7 @@ function ReadIdButton({ guest, idType, idTypes, onDone }: {
   return (
     <div className="flex flex-wrap items-center gap-1.5 rounded-lg border border-zinc-200 px-3 py-2 text-xs print:hidden">
       <label className="flex basis-full items-start gap-1.5 text-zinc-500"
-        title={t("The guest must know their ID is read by Kamra's verification partner")}>
+        title={t("The guest must know their ID is read by StayDesk's verification partner")}>
         <input type="checkbox" className="mt-0.5" checked={told} onChange={(e) => setTold(e.target.checked)} />
         {t("Guest told their ID is read by our verification partner")}
       </label>

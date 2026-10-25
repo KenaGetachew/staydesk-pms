@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="branding/png/kamra-mark-512.png" width="96" alt="Kamra, open-source hotel PMS" />
+  <img src="branding/png/staydesk-mark-512.png" width="96" alt="Kamra, open-source hotel PMS" />
 </p>
 
 <h1 align="center">Kamra PMS</h1>

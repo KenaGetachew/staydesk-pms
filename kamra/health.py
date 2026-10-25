@@ -161,7 +161,7 @@ def _frappe_check() -> dict:
 	major = int(str(ver).split(".")[0]) if str(ver)[0:1].isdigit() else 0
 	if major and major < 16:
 		status = "attention"
-		detail = f"Frappe {ver} — Kamra targets Frappe v16."
+		detail = f"Frappe {ver} — StayDesk targets Frappe v16."
 	else:
 		status = "passed"
 		detail = f"Frappe {ver}."

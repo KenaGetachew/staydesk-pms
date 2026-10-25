@@ -4,7 +4,7 @@
     bar and the /apps launcher move between them; Search (Ctrl/Cmd+K) jumps
     anywhere and the sidebar follows.
 
-    Every app is open and included - Kamra is fully open source. */
+    Every app is open and included - StayDesk is fully open source. */
 
 import {
   BadgePercent,
@@ -116,7 +116,7 @@ export const APPS: AppDef[] = [
     items: [
       { to: "/", label: "Today", icon: Home },
       { to: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-      { to: "/assistant", label: "Kamra Agent", icon: Sparkles },
+      { to: "/assistant", label: "StayDesk Agent", icon: Sparkles },
       { to: "/reservations", label: "Reservations", icon: ClipboardList },
       { to: "/crs", label: "Central Reservations", icon: Search },
       { to: "/tape", label: "Tape Chart", icon: LayoutGrid },

@@ -336,7 +336,7 @@ export default function AppShell() {
           aria-label={t("Home")}
           className="mb-5 flex items-center gap-2 rounded-lg px-1 outline-none focus-visible:ring-2 focus-visible:ring-brand-600"
         >
-          <img src={asset("kamra-mark.svg")} alt="" className="size-7" aria-hidden />
+          <img src={asset("staydesk-mark.svg")} alt="" className="size-7" aria-hidden />
           <span className="text-lg font-semibold tracking-tight text-zinc-900">
             kamra
             <span className="ml-1 align-middle text-[10px] font-semibold tracking-[0.2em] text-brand-600">
@@ -391,9 +391,9 @@ export default function AppShell() {
         {build ? (
           <p
             className="px-2.5 pt-2 text-[11px] text-zinc-400"
-            title={t("The Kamra version this site is running")}
+            title={t("The StayDesk version this site is running")}
           >
-            Kamra v{build}
+            StayDesk v{build}
           </p>
         ) : null}
       </aside>

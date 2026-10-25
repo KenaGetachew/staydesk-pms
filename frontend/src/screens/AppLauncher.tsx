@@ -31,7 +31,7 @@ export default function AppLauncher() {
       <header>
         <h1 className="text-xl font-semibold tracking-tight text-zinc-900">{t("Your apps")}</h1>
         <p className="mt-0.5 text-sm text-zinc-500">
-          {t("Everything Kamra does, one room at a time. Pick where you want to work.")}
+          {t("Everything StayDesk does, one room at a time. Pick where you want to work.")}
         </p>
       </header>
 

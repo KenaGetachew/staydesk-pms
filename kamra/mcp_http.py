@@ -273,7 +273,7 @@ def _dispatch_method(method: str, params: dict, grant) -> dict:
 		return {
 			"protocolVersion": version,
 			"capabilities": {"tools": {"listChanged": False}},
-			"serverInfo": {"name": "kamra", "version": str(TOOL_COUNT), "title": "Kamra PMS"},
+			"serverInfo": {"name": "kamra", "version": str(TOOL_COUNT), "title": "StayDesk PMS"},
 			"instructions": INSTRUCTIONS,
 		}
 	if method in ("notifications/initialized", "notifications/cancelled"):

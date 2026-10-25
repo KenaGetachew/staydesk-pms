@@ -61,11 +61,11 @@ const STR_LISTING_DEFAULT: RoomTypeRow = {
 /** What can be switched on. The owner picks; anything left off can be
  *  turned on later in Settings. Front desk and admin are always on. */
 const MODULE_CHOICES: { id: string; label: string; blurb: string; info: string; doc: string; locked?: boolean; hotelOnly?: boolean }[] = [
-  { id: "front-desk", label: "Front desk and reservations", blurb: "Bookings, check-in and out, folios, the tape chart.", info: "The core of Kamra: taking bookings, checking guests in and out, billing. Always on.", doc: "front-desk", locked: true },
+  { id: "front-desk", label: "Front desk and reservations", blurb: "Bookings, check-in and out, folios, the tape chart.", info: "The core of StayDesk: taking bookings, checking guests in and out, billing. Always on.", doc: "front-desk", locked: true },
   { id: "booking-engine", label: "Online booking page", blurb: "A simple page guests book and pay on, no other system needed.", info: "A public /book page for your property. Good for direct bookings and small places. You can run it on its own or alongside a channel manager.", doc: "booking-engine" },
   { id: "housekeeping", label: "Housekeeping", blurb: "Room status, cleaning tasks, a phone app for attendants.", info: "Assigns and tracks room cleaning, inspections and lost and found.", doc: "housekeeping" },
   { id: "operations", label: "Guest requests", blurb: "Tickets with deadlines (SLA) and who solved what.", info: "Guest requests become tickets with a promised time. You see who has each and who solved it.", doc: "operations", hotelOnly: true },
-  { id: "fnb", label: "Restaurant and POS", blurb: "Outlets, menus, orders, kitchen tickets, bills.", info: "Run one or more restaurants, bars or room service from Kamra, with kitchen tickets and bills. Turning this on adds a step for outlets, stations and tills.", doc: "fnb", hotelOnly: true },
+  { id: "fnb", label: "Restaurant and POS", blurb: "Outlets, menus, orders, kitchen tickets, bills.", info: "Run one or more restaurants, bars or room service from StayDesk, with kitchen tickets and bills. Turning this on adds a step for outlets, stations and tills.", doc: "fnb", hotelOnly: true },
   { id: "events", label: "Banquets and events", blurb: "Halls, function quotes, menus and event orders.", info: "For properties that host weddings, conferences or parties.", doc: "banquets", hotelOnly: true },
   { id: "revenue", label: "Revenue", blurb: "Rate plans, seasons, best available rate (BAR), rate rules.", info: "BAR is your base rate for a room. Seasons and rate plans raise or lower it by date or by deal.", doc: "revenue" },
   { id: "finance", label: "Finance", blurb: "Tills, ledgers, night audit, reports and accounting export.", info: "Cashier tills, company accounts, the end-of-day (night audit) close and books export.", doc: "billing" },
@@ -330,7 +330,7 @@ export default function Setup() {
     <div className="mx-auto max-w-2xl">
       <h1 className="mb-1 text-lg font-semibold">{t("Set up a new property")}</h1>
       <p className="mb-4 text-sm text-zinc-500">
-        {t("Hotel or vacation rental - same product, different defaults. Prefer talking? Connect Claude to Kamra's MCP and say \"onboard my property\".")}
+        {t("Hotel or vacation rental - same product, different defaults. Prefer talking? Connect Claude to StayDesk's MCP and say \"onboard my property\".")}
       </p>
 
       {mode === "choose" && (
@@ -845,7 +845,7 @@ export default function Setup() {
               )}
               {topology === "whole_property" && (
                 <p className="rounded-lg bg-zinc-50 px-3 py-2 text-sm text-zinc-600">
-                  {t("Kamra will create a whole-property sellable unit for each listing. You can add physical rooms later for housekeeping if needed.")}
+                  {t("StayDesk will create a whole-property sellable unit for each listing. You can add physical rooms later for housekeeping if needed.")}
                 </p>
               )}
             </div>
@@ -1107,7 +1107,7 @@ export default function Setup() {
           {step === importStep && (
             <div className="space-y-4">
               <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-800">
-                <span className="font-semibold">{createdProperty}</span> {t("is live. Bring your bookings, companies and opening balances over from Kamra's CSV templates, then reconcile before you switch - or let the AI migration assistant do the mapping via MCP.")}
+                <span className="font-semibold">{createdProperty}</span> {t("is live. Bring your bookings, companies and opening balances over from StayDesk's CSV templates, then reconcile before you switch - or let the AI migration assistant do the mapping via MCP.")}
               </div>
               <div className="rounded-lg border border-brand-200 bg-brand-50/60 px-4 py-3 text-sm text-zinc-800">
                 <p className="font-semibold text-brand-800">
@@ -1115,7 +1115,7 @@ export default function Setup() {
                 </p>
                 <p className="mt-1 text-zinc-600">
                   {t(
-                    "After the desk is live, put an AI concierge on your WhatsApp number - it uses Kamra's tools. Metered by HeyKoala; the PMS stays free.",
+                    "After the desk is live, put an AI concierge on your WhatsApp number - it uses StayDesk's tools. Metered by HeyKoala; the PMS stays free.",
                   )}
                 </p>
                 <a

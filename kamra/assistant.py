@@ -23,8 +23,8 @@ from kamra.mcp_tools import (IDEMPOTENCY_KEY_PARAM, MEAL_PLAN_PARAM,
 MAX_TOOL_ROUNDS = 6
 TIMEOUT = 60
 
-SYSTEM = """You are Kamra Agent, the assistant for {property_name}, a hotel
-running Kamra PMS. Today is {today}. You help staff work faster: look
+SYSTEM = """You are StayDesk Agent, the assistant for {property_name}, a hotel
+running StayDesk PMS. Today is {today}. You help staff work faster: look
 things up, quote, book, check guests in and out, post charges, take
 payments, preview and process cancellations.
 
@@ -572,7 +572,7 @@ def test_connection(property: str, base_url: str | None = None,
 		frappe.throw(
 			"That looks like an Anthropic / Claude API key. This chat uses "
 			"OpenAI-compatible Chat Completions only. Use Connect Claude "
-			"(MCP) on Kamra Agent, or put Claude behind OpenRouter.")
+			"(MCP) on StayDesk Agent, or put Claude behind OpenRouter.")
 
 	base = (base_url or (s.base_url if s else None)
 	        or "https://api.openai.com/v1").rstrip("/")
@@ -877,12 +877,12 @@ def ask_stream(property: str, messages):
 	})
 
 
-HELP_SYSTEM = """You are the Kamra PMS help assistant. You explain HOW to use
-Kamra - an open-source, AI-native hotel PMS - to hotel staff. You do NOT act on
-hotel data (Kamra Agent does that); you give short, concrete how-to
+HELP_SYSTEM = """You are the StayDesk PMS help assistant. You explain HOW to use
+StayDesk - an AI-native hotel PMS - to hotel staff. You do NOT act on
+hotel data (StayDesk Agent does that); you give short, concrete how-to
 answers and point to where things live in the app.
 
-What Kamra does and where to find it:
+What StayDesk does and where to find it:
 - Front desk: "Today" (arrivals, departures, in-house, room board, check in /
   out), Tape Chart (rooms × dates; move rooms, amend stays), Calendar
   (availability).
@@ -910,7 +910,7 @@ What Kamra does and where to find it:
 - Roles: a System Admin (IT - users, API keys, Frappe Desk) versus a Hotel
   Admin / GM (runs the property, no IT access). Manage staff from
   Admin → Manage Users.
-- Kamra Agent (the sparkle button) can act - quote, book, check in,
+- StayDesk Agent (the sparkle button) can act - quote, book, check in,
   post charges, cancel, and watch the waitlist. This help assistant only
   explains how to do things yourself.
 

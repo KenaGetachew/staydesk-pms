@@ -93,7 +93,7 @@ const TABS: { id: Tab; label: string; hint: string }[] = [
   { id: "bookings", label: "1 · Bookings", hint: "Future, in-house and past stays" },
   { id: "companies", label: "2 · Companies", hint: "Corporate accounts and credit terms" },
   { id: "opening", label: "3 · Opening balances", hint: "In-house folios, city ledger, deposits" },
-  { id: "reconcile", label: "4 · Reconcile", hint: "Tie every file to Kamra" },
+  { id: "reconcile", label: "4 · Reconcile", hint: "Tie every file to StayDesk" },
 ]
 
 const ENDPOINTS: Record<FileKind, { preview: string; run: string }> = {
@@ -194,7 +194,7 @@ export default function GoLiveImport({
 
   function describeRun(kind: FileKind, res: Record<string, unknown>): string {
     if (kind === "bookings") {
-      return t("{n} booking(s) imported, {h} as past-stay history, {a} already in Kamra", {
+      return t("{n} booking(s) imported, {h} as past-stay history, {a} already in StayDesk", {
         n: Number(res.created ?? 0),
         h: Number(res.history ?? 0),
         a: Number(res.already_imported ?? 0),
@@ -368,7 +368,7 @@ export default function GoLiveImport({
           <CardContent className="space-y-4 pt-4">
             <p className="text-sm text-zinc-600">
               {t(
-                "Compares the files loaded in steps 1-3 with what is now in Kamra: counts and totals per category. Go live only when every line matches.",
+                "Compares the files loaded in steps 1-3 with what is now in StayDesk: counts and totals per category. Go live only when every line matches.",
               )}
             </p>
             <div className="flex flex-wrap gap-2 text-xs">
@@ -427,7 +427,7 @@ function PreviewPanel({ kind, preview }: { kind: FileKind; preview: Preview }) {
         )}
         {kind === "bookings" && (preview as BookingsPreview).already_imported > 0 && (
           <span className="text-zinc-500">
-            {t("{n} already in Kamra (left alone)", { n: (preview as BookingsPreview).already_imported })}
+            {t("{n} already in StayDesk (left alone)", { n: (preview as BookingsPreview).already_imported })}
           </span>
         )}
         {kind === "companies" && (
@@ -510,7 +510,7 @@ function ReconView({ recon }: { recon: Reconciliation }) {
           </p>
           <p>
             {recon.ready
-              ? t("Every file ties to Kamra as of business date {date}. Switch the desk over.", {
+              ? t("Every file ties to StayDesk as of business date {date}. Switch the desk over.", {
                   date: recon.business_date,
                 })
               : t("Fix what is listed below, import again (already-posted rows are skipped), then reconcile again.")}
@@ -525,8 +525,8 @@ function ReconView({ recon }: { recon: Reconciliation }) {
               <th className="py-1.5 font-medium">{t("Category")}</th>
               <th className="py-1.5 text-right font-medium">{t("File rows")}</th>
               <th className="py-1.5 text-right font-medium">{t("File total")}</th>
-              <th className="py-1.5 text-right font-medium">{t("In Kamra")}</th>
-              <th className="py-1.5 text-right font-medium">{t("Kamra total")}</th>
+              <th className="py-1.5 text-right font-medium">{t("In StayDesk")}</th>
+              <th className="py-1.5 text-right font-medium">{t("StayDesk total")}</th>
               <th className="py-1.5 text-right font-medium">{t("Status")}</th>
             </tr>
           </thead>

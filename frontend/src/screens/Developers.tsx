@@ -285,7 +285,7 @@ export default function Developers() {
           <p className="mt-0.5 text-xs text-zinc-400">
             Point Claude at this property over MCP. Staff should use{" "}
             <a href="/kamra/assistant" className="font-medium text-brand-700 hover:underline">
-              Kamra Agent → Connect Claude
+              StayDesk Agent → Connect Claude
             </a>
             . The key above is for unattended / service integrations.
           </p>
