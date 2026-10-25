@@ -484,7 +484,7 @@ def _flow_payload(res, steps, ctx, guest) -> dict:
 			"address": ", ".join(x for x in [guest.get("address_line"), guest.get("city")]
 			                     if x) if guest else "",
 		},
-		"vocabulary": front_desk_vocabulary(pack_for(res.property)),
+		"vocabulary": front_desk_vocabulary(pack_for(res.property), res.property),
 		"steps": steps,
 		"missing_required": [s["step_key"] for s in missing_required(steps)],
 		"rooms": _free_rooms(res) if not res.room else [],

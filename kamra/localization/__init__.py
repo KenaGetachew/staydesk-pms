@@ -18,6 +18,9 @@ existing pack keeps working untouched:
   tax_split(prop_doc, buyer_tax_id) -> list[(label, share)]
   amount_in_words(prop_doc, amount) -> str
 
+Optional, for guest phone numbers (checked by dial code, see below):
+  DIAL_CODE = "251"; validate_phone(national_number) -> str | None
+
 Optional country integrations - absent means "not offered in this country",
 and the accessors refuse rather than fall back to another country's:
   PAYMENT_GATEWAYS = [...]; payment_provider(gateway) -> module
@@ -130,7 +133,14 @@ GENERIC_PAYMENT_MODES = ["Cash", "Card", "Bank Transfer"]
 CANONICAL_PAYMENT_MODES = ("Cash", "Card", "UPI", "Bank Transfer")
 
 
-def id_types(pack) -> list[str]:
+def id_types(pack, property: str | None = None) -> list[str]:
+	"""The ID types the desk offers: the property's own list when it keeps
+	one (Property.id_types, one per line), else its country's."""
+	if property:
+		own = frappe.get_cached_value("Property", property, "id_types") or ""
+		rows = [line.strip() for line in own.splitlines() if line.strip()]
+		if rows:
+			return rows
 	return list(getattr(pack, "ID_TYPES", None) or GENERIC_ID_TYPES)
 
 
@@ -139,9 +149,9 @@ def payment_modes(pack) -> list[str]:
 	return [m for m in modes if m in CANONICAL_PAYMENT_MODES]
 
 
-def front_desk_vocabulary(pack) -> dict:
+def front_desk_vocabulary(pack, property: str | None = None) -> dict:
 	return {
-		"id_types": id_types(pack),
+		"id_types": id_types(pack, property),
 		"payment_modes": payment_modes(pack),
 		"default_nationality": getattr(pack, "DEFAULT_NATIONALITY", "") or "",
 		"adult_age": adult_age(pack),
@@ -203,11 +213,45 @@ def validate_id_type(property: str | None, id_type: str | None):
 	already on file are never re-checked - only new writes."""
 	if not id_type:
 		return
-	allowed = id_types(pack_for(property))
+	allowed = id_types(pack_for(property), property)
 	if id_type not in allowed:
 		frappe.throw(
 			frappe._("Unknown ID type {0}. Use one of: {1}.").format(
 				id_type, ", ".join(allowed)))
+
+
+# ── phone numbers ────────────────────────────────────────────────────────
+# A guest belongs to no property, so a phone is checked by its dial code: a
+# pack that declares DIAL_CODE and validate_phone(national) -> error | None
+# owns the numbers under that code. Numbers without a "+" dial code, or
+# under a code no pack claims, are not checked.
+
+
+def phone_error(phone: str | None) -> str | None:
+	raw = (phone or "").strip()
+	if not raw.startswith(("+", "00")):
+		return None
+	digits = "".join(c for c in raw if c.isdigit())
+	if raw.startswith("00"):
+		digits = digits[2:]
+	mapping = frappe.get_hooks("kamra_localization") or {}
+	for target in mapping.values():
+		path = target[-1] if isinstance(target, (list, tuple)) else target
+		try:
+			pack = importlib.import_module(path)
+		except ModuleNotFoundError:
+			continue
+		dial = getattr(pack, "DIAL_CODE", None)
+		check = getattr(pack, "validate_phone", None)
+		if dial and check and digits.startswith(dial):
+			return check(digits[len(dial):])
+	return None
+
+
+def validate_phone(phone: str | None):
+	error = phone_error(phone)
+	if error:
+		frappe.throw(frappe._(error))
 
 
 # ── country integrations: payment gateways, tax returns, verification ────
