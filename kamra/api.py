@@ -1621,8 +1621,9 @@ def _refund_folio_payment(folio: str, amount: float, mode: str, reason: str,
 	refunded = -sum(float(p.amount or 0) for p in doc.payments
 	                if float(p.amount or 0) < 0)
 	if float(amount) > received - refunded:
-		frappe.throw(f"Only ₹{received - refunded:,.2f} was collected on "
-		             "this folio - can't refund more than that.")
+		from kamra.localization import money_text
+		frappe.throw(f"Only {money_text(doc.property, received - refunded)} was "
+		             "collected on this folio - can't refund more than that.")
 	from kamra.business_date import get_business_date
 	from kamra.cashier import record_cashier_txn, require_open_session
 	bd = get_business_date(doc.property)

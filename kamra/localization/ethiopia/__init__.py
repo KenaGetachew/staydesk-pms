@@ -14,7 +14,8 @@ at 15%. This first cut is a flat-rate pack, like Thailand:
 Settles in Birr (ETB, 2 decimals). No fiscal-device or e-invoicing
 integration for now; the e-invoicing hooks stay unimplemented.
 
-Ethiopia-only integrations (the Chapa gateway) will sit beside this file.
+Online payments go through Chapa (chapa.py beside this file), which covers
+telebirr, CBE Birr, M-Pesa, cards and bank payments.
 """
 
 from decimal import Decimal
@@ -99,3 +100,11 @@ def locale(prop_doc) -> dict:
 		"tax_id_label": "TIN",
 		"tax_rates": tax_rate_options(prop_doc.name),
 	}
+
+
+PAYMENT_GATEWAYS = ["Chapa"]
+
+
+def payment_provider(gateway: str):
+	from kamra.localization.ethiopia import chapa
+	return chapa

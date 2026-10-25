@@ -13,6 +13,7 @@
   "column_break_a",
   "enabled",
   "test_mode",
+  "link_expiry_hours",
   "sb_keys",
   "key_id",
   "column_break_b",
@@ -31,11 +32,10 @@
   {
    "default": "Razorpay",
    "fieldname": "gateway",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "description": "Offered by the property's country pack (India: Razorpay, Cashfree)",
-   "label": "Gateway",
-   "options": "Razorpay\nCashfree"
+   "description": "One of the gateways the property's country pack offers (India: Razorpay, Cashfree; Ethiopia: Chapa).",
+   "label": "Gateway"
   },
   {
    "fieldname": "column_break_a",
@@ -56,6 +56,13 @@
    "fieldtype": "Check",
    "in_list_view": 1,
    "label": "Test Mode"
+  },
+  {
+   "fieldname": "link_expiry_hours",
+   "fieldtype": "Int",
+   "label": "Link Expiry (hours)",
+   "default": "24",
+   "description": "An unpaid link is marked Expired after this many hours. A payment that still arrives later is posted."
   },
   {
    "fieldname": "sb_keys",
@@ -90,7 +97,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-10-09 12:00:00.000000",
+ "modified": "2026-10-25 00:00:00",
  "modified_by": "Administrator",
  "module": "Kamra",
  "name": "Payment Gateway Settings",

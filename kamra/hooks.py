@@ -44,6 +44,9 @@ scheduler_events = {
 			# group blocks past their cutoff give unpicked rooms back to sale
 			"kamra.group_blocks.release_expired_blocks",
 			"kamra.no_show.release_non_guaranteed_arrivals",
+			# ask the gateway about links still pending, so a missed
+			# webhook never loses a payment; stale ones expire
+			"kamra.payments.sweep_pending_transactions",
 		],
 		# 08:30 - the banquet team's morning list: follow-ups gone quiet,
 		# tentative holds about to lapse, payments due, event orders missing
@@ -252,7 +255,7 @@ _PROPERTY_SCOPED = (
 	"Ingredient", "Ingredient Ledger Entry", "Ingredient Stock", "Kitchen Printer",
 	"Laundry Order", "Laundry Rate", "Lost And Found Item", "MCP OAuth Grant",
 	"Meal Plan", "Menu Item", "Night Audit Run", "Outbound Webhook",
-	"Outbound Webhook Delivery", "Payment Gateway Settings",
+	"Outbound Webhook Delivery", "Payment Gateway Settings", "Payment Gateway Transaction",
 	"Petty Cash Voucher", "POS Order", "POS Outlet", "POS Table Reservation",
 	"Print Job",
 	"Proforma Folio", "Property Setting", "Rate Guardrail", "Rate Plan",

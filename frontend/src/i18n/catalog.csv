@@ -249,7 +249,7 @@ always on,always on,,screens/Setup.tsx,,needs_translation
 Always on,Always on,,screens/settings/AccessPages.tsx,,needs_translation
 Always required,Always required,مطلوب دائما,screens/settings/cards.tsx,,translated
 Amenities,Amenities,المرافق,components/RoomDrawer.tsx,,translated
-Amount,Amount,المبلغ,components/CheckOutDialog.tsx; components/DepositPanel.tsx; components/RoomStayPanels.tsx; components/SecurityDepositPanel.tsx; screens/CashierTill.tsx; screens/PettyCash.tsx; screens/pos/OrderHistory.tsx; screens/pos/PosSidePanel.tsx,,translated
+Amount,Amount,المبلغ,components/CheckOutDialog.tsx; components/DepositPanel.tsx; components/GatewayPayments.tsx; components/RoomStayPanels.tsx; components/SecurityDepositPanel.tsx; screens/CashierTill.tsx; screens/PettyCash.tsx; screens/pos/OrderHistory.tsx; screens/pos/PosSidePanel.tsx,,translated
 Amount (before tax),Amount (before tax),المبلغ (قبل الضريبة),components/RoomStayPanels.tsx,,translated
 Amount (held {amt}),Amount (held {amt}),المبلغ (المحتجز {amt}),components/SecurityDepositPanel.tsx,amt,translated
 Amount {cur},Amount {cur},المبلغ {cur},screens/FolioView.tsx; screens/HkApp.tsx,cur,translated
@@ -1317,6 +1317,7 @@ One printer is set up per station. Connect the physical printers later under Pri
 Online check-in,Online check-in,تسجيل الوصول عبر الإنترنت,screens/PublicCheckin.tsx,,translated
 Online check-in {status},Online check-in {status},التسجيل عبر الإنترنت {status},screens/RegistrationCard.tsx,status,translated
 Online payment links are not available for this country yet. Take payments at the desk.,Online payment links are not available for this country yet. Take payments at the desk.,,screens/settings/cards.tsx,,needs_translation
+Online payments,Online payments,,components/GatewayPayments.tsx,,needs_translation
 Only a Hotel Admin can book a blacklisted guest.,Only a Hotel Admin can book a blacklisted guest.,يمكن لمدير الفندق فقط حجز نزيل في القائمة السوداء.,components/BookingDialog.tsx,,translated
 Only a name and phone are kept. A phone already on file reuses that guest.,Only a name and phone are kept. A phone already on file reuses that guest.,يُحفظ الاسم والهاتف فقط. الهاتف المسجل مسبقًا يعيد استخدام ملف النزيل نفسه.,screens/pos/PosSidePanel.tsx,,translated
 Only Finance or a Hotel Admin can override it.,Only Finance or a Hotel Admin can override it.,,components/BookingDialog.tsx,,needs_translation
@@ -1566,7 +1567,7 @@ Reason (optional),Reason (optional),السبب (اختياري),screens/HkApp.ts
 Reason (required - e.g. deposit returned),Reason (required - e.g. deposit returned),السبب (مطلوب - مثل إعادة العربون),screens/FolioView.tsx,,translated
 Reason (required - goes on the record),Reason (required - goes on the record),السبب (مطلوب - يُسجَّل),screens/FolioView.tsx,,translated
 "Reason (required, goes on the record)","Reason (required, goes on the record)",السبب (مطلوب، يُحفظ في السجل),components/CheckOutDialog.tsx,,translated
-Reason (required),Reason (required),السبب (مطلوب),components/SecurityDepositPanel.tsx; screens/FolioView.tsx,,translated
+Reason (required),Reason (required),السبب (مطلوب),components/GatewayPayments.tsx; components/SecurityDepositPanel.tsx; screens/FolioView.tsx,,translated
 Reason (sent to the guest),Reason (sent to the guest),السبب (يُرسل إلى الضيف),components/BookingRequests.tsx,,translated
 Reason for overriding the blacklist,Reason for overriding the blacklist,سبب تجاوز القائمة السوداء,components/BookingDialog.tsx,,translated
 Reason for the credit override (logged),Reason for the credit override (logged),,components/BookingDialog.tsx,,needs_translation
@@ -1592,13 +1593,14 @@ Reference,Reference,المرجع,components/BookingDialog.tsx,,translated
 "Reference (birthday, complaint #, promo…)","Reference (birthday, complaint #, promo…)",,screens/POS.tsx; screens/pos/SettleSheet.tsx,,needs_translation
 Reference (optional),Reference (optional),مرجع (اختياري),components/CheckOutDialog.tsx; components/RoomStayPanels.tsx; screens/FolioView.tsx,,translated
 Refresh,Refresh,تحديث,components/CheckInDialog.tsx; screens/HkApp.tsx; screens/HousekeepingBoard.tsx; screens/Kitchen.tsx; screens/Rooms.tsx; screens/SystemHealth.tsx,,translated
-Refund,Refund,استرداد,screens/FolioView.tsx,,translated
+Refund,Refund,استرداد,components/GatewayPayments.tsx; screens/FolioView.tsx,,translated
 Refund {amount},Refund {amount},رد {amount},components/CheckOutDialog.tsx,amount,translated
 Refund {amt},Refund {amt},استرداد {amt},components/SecurityDepositPanel.tsx,amt,translated
 Refund by,Refund by,الرد عن طريق,components/CheckOutDialog.tsx,,translated
 Refund deposit,Refund deposit,استرداد التأمين,components/SecurityDepositPanel.tsx,,translated
 Refund money (deposit return / over-collection),Refund money (deposit return / over-collection),استرداد مال (إعادة عربون / تحصيل زائد),screens/FolioView.tsx,,translated
 Refund of overpayment at check-out,Refund of overpayment at check-out,رد مبلغ زائد عند المغادرة,components/CheckOutDialog.tsx,,translated
+Refund through {gateway},Refund through {gateway},,components/GatewayPayments.tsx,gateway,needs_translation
 "Refundable damage deposit - held for the guest, not revenue. Refunded or withheld at check-out.","Refundable damage deposit - held for the guest, not revenue. Refunded or withheld at check-out.",تأمين أضرار قابل للاسترداد - يُحتجز لصالح النزيل وليس إيرادًا. يُعاد أو يُحتجز عند المغادرة.,components/SecurityDepositPanel.tsx,,translated
 Refunded,Refunded,مُسترد,components/SecurityDepositPanel.tsx,,translated
 Region *,Region *,,screens/Setup.tsx,,needs_translation
@@ -1919,6 +1921,7 @@ Team,Team,الفريق,components/RoomStayPanels.tsx,,translated
 Temp / custom table…,Temp / custom table…,,screens/POS.tsx,,needs_translation
 Ten to fifteen minutes,Ten to fifteen minutes,,screens/Setup.tsx,,needs_translation
 Terminals,Terminals,,screens/CashierBoard.tsx,,needs_translation
+test,test,,components/GatewayPayments.tsx,,needs_translation
 Test connection,Test connection,,screens/settings/cards.tsx,,needs_translation
 Test event delivered.,Test event delivered.,,screens/settings/WebhooksPage.tsx,,needs_translation
 Test failed,Test failed,,screens/settings/WebhooksPage.tsx,,needs_translation
