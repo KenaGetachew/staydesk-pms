@@ -305,14 +305,18 @@ function gatewaySpecs(gateways: string[]): Spec[] {
     {
       field: "key_id",
       label: "Key ID / App ID",
-      hint: "Razorpay: Account & Settings → API Keys. Cashfree: Developers → API Keys (App ID)",
+      hint: gateways.includes("Chapa")
+        ? "Chapa: Settings → API Keys (public key). Test keys take sandbox payments"
+        : "Razorpay: Account & Settings → API Keys. Cashfree: Developers → API Keys (App ID)",
     },
     { field: "key_secret", label: "Key secret / Secret key", type: "password" },
     {
       field: "webhook_secret",
       label: "Webhook secret",
       type: "password",
-      hint: "Razorpay only: set the same secret on the Razorpay webhook. Cashfree signs with the secret key",
+      hint: gateways.includes("Chapa")
+        ? "The secret hash set on the Chapa webhook - unsigned events are refused"
+        : "Razorpay only: set the same secret on the Razorpay webhook. Cashfree signs with the secret key",
     },
   ]
 }
@@ -322,6 +326,9 @@ type GatewayInfo = {
   webhook_url: string
   signup_url: string
   needs_webhook: boolean
+  /** gateway-specific setup wording, where the pack provides it */
+  webhook_hint?: string
+  signup_pitch?: string
 }
 
 /** Setup help under the Payments card: where the gateway should send
@@ -345,12 +352,12 @@ function GatewayHelp({ property, gateway, hasKeys }: {
           {t("No {gateway} account yet?", { gateway: info.gateway })}{" "}
           <a className="font-medium text-brand-700 underline" href={info.signup_url}
              target="_blank" rel="noopener">{t("Create one free")}</a>
-          {" "}{t("and take UPI, cards and netbanking for advances and bills.")}
+          {" "}{info.signup_pitch ? t(info.signup_pitch) : t("and take UPI, cards and netbanking for advances and bills.")}
         </p>
       )}
       {info.needs_webhook ? (
         <p>
-          {t("In Razorpay, add a webhook for the payment_link.paid event pointing to")}{" "}
+          {info.webhook_hint ? t(info.webhook_hint) : t("In Razorpay, add a webhook for the payment_link.paid event pointing to")}{" "}
           <code className="select-all break-all rounded bg-white px-1 py-0.5 text-xs">{info.webhook_url}</code>
         </p>
       ) : (

@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRightLeft, Printer, Trash2, X } from "lucide-react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import { call, getCurrentProperty } from "../lib/api"
 import EditableNationality from "../components/EditableNationality"
+import GatewayPayments from "../components/GatewayPayments"
 import LinkedRecords from "../components/LinkedRecords"
 import { loadLocale, taxRates } from "../lib/money"
 import { serverError } from "../lib/resource"
@@ -270,12 +271,15 @@ export default function FolioView() {
   const [cancelReason, setCancelReason] = useState("")
   const [allowance, setAllowance] = useState({ amount: "", reason: "", gst_rate: "0" })
   const { ensureUnlocked, status: pinStatus } = useCashierAuth()
+  // bumps on every reload, so panels that fetch their own data follow it
+  const [loads, setLoads] = useState(0)
 
   const load = useCallback(() => {
     if (name)
       call<InvoiceData>("kamra.api.folio_invoice", { folio: name })
         .then((d) => {
           setData(d)
+          setLoads((n) => n + 1)
           setPayment((p) => ({ ...p, amount: String(d.folio.balance || "") }))
           return call<SiblingFolio[]>("kamra.api.reservation_folios", {
             reservation: d.stay.reservation,
@@ -1210,6 +1214,9 @@ export default function FolioView() {
               )}
             </div>
           )}
+
+          <GatewayPayments folio={folio.name} open={open} busy={busy} act={act}
+            version={String(loads)} />
 
           {folio.invoice_number && (
             <div className="mt-8 flex items-end justify-between border-t border-zinc-200 pt-4 text-xs text-zinc-500">

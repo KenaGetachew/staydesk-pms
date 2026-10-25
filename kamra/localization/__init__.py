@@ -294,6 +294,35 @@ def gateway_info(pack, gateway: str | None) -> dict:
 	return _provider(pack, gateway).info()
 
 
+def gateway_sandbox(pack, settings) -> bool:
+	"""Live calls made with the gateway's test keys (optional)."""
+	fn = getattr(_provider(pack, settings.gateway), "is_sandbox", None)
+	return bool(fn and fn(settings))
+
+
+def gateway_can(pack, gateway: str | None, capability: str) -> bool:
+	"""Optional provider capabilities: check_status (ask the gateway what
+	happened to a link) and refund."""
+	return bool(gateway in payment_gateways(pack)
+	            and getattr(pack.payment_provider(gateway), capability, None))
+
+
+def check_gateway_status(pack, settings, link_id: str) -> dict:
+	"""{status: success|failed|pending, amount, currency, reference}."""
+	provider = _provider(pack, settings.gateway)
+	if not getattr(provider, "check_status", None):
+		_not_offered(frappe._("Checking a {0} payment").format(settings.gateway))
+	return provider.check_status(settings, link_id)
+
+
+def refund_gateway_payment(pack, settings, tx, amount, reason: str) -> str:
+	"""Refund through the gateway; returns the gateway's refund reference."""
+	provider = _provider(pack, settings.gateway)
+	if not getattr(provider, "refund", None):
+		_not_offered(frappe._("Refunds through {0}").format(settings.gateway))
+	return provider.refund(settings, tx, amount, reason)
+
+
 def _gateway_provider_any(gateway: str):
 	"""The provider for a gateway name, from whichever pack offers it. A
 	webhook names its gateway before it names a property."""

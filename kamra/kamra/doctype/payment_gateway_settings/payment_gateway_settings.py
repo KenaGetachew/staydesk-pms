@@ -14,10 +14,11 @@ class PaymentGatewaySettings(Document):
 			frappe.throw(
 				frappe._("{0} is not offered for this property's country. Available: {1}.")
 				.format(self.gateway, ", ".join(offered) or frappe._("none")))
-		# Razorpay confirmations are signature-checked with this secret;
-		# without it every webhook is refused and folios never get marked
-		# paid. Cashfree signs with the secret key instead.
-		if self.enabled and self.gateway == "Razorpay" and not self.webhook_secret:
+		# Razorpay and Chapa confirmations are signature-checked with this
+		# secret; without it every webhook is refused and folios never get
+		# marked paid. Cashfree signs with the secret key instead.
+		if self.enabled and not self.webhook_secret and \
+		   loc.gateway_info(loc.pack_for(self.property), self.gateway).get("needs_webhook"):
 			frappe.msgprint(
 				"Set the webhook secret (the same one entered on the gateway's "
 				"webhook): payment confirmations are rejected until it is.",

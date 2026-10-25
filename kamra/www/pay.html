@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>{{ heading }}</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/kamra/staydesk-mark.svg" />
+  <style>
+    :root { --brand: #0d5c63; --ink: #2b1d14; --muted: #6b6560; --bg: #f8f7f5; --card: #fff; --line: #e6e3de; }
+    @media (prefers-color-scheme: dark) {
+      :root { --brand: #4cc3cb; --ink: #f6f6f7; --muted: #a7a7b0; --bg: #151517; --card: #1c1c1f; --line: #2f2f34; }
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100dvh; display: grid; place-items: center; padding: 16px;
+           background: var(--bg); color: var(--ink); font: 15px/1.5 ui-sans-serif, system-ui, sans-serif; }
+    main { width: 100%; max-width: 420px; background: var(--card); border: 1px solid var(--line);
+           border-radius: 12px; padding: 28px 24px; text-align: center; }
+    img { width: 48px; height: 48px; }
+    h1 { font-size: 20px; margin: 12px 0 4px; }
+    .amount { font-size: 24px; font-weight: 600; color: var(--brand); margin: 12px 0 0;
+              font-variant-numeric: tabular-nums; }
+    .hotel, p { color: var(--muted); }
+    p { margin: 12px 0 0; }
+    a.btn { display: inline-block; margin-top: 18px; color: var(--brand); font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/assets/kamra/staydesk-mark.svg" alt="" />
+    <h1>{{ heading }}</h1>
+    {% if hotel %}<div class="hotel">{{ hotel }}</div>{% endif %}
+    {% if amount and status != "Unknown" %}<div class="amount">{{ amount }}</div>{% endif %}
+    <p>{{ text }}</p>
+    {% if status == "Pending" %}<a class="btn" href="">Refresh</a>{% endif %}
+  </main>
+</body>
+</html>
