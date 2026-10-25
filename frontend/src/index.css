@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme {
-  /* Kamra brand: deep hotel green, warm neutrals */
-  --color-brand-50: #ecf7f2;
-  --color-brand-100: #d2ece0;
-  --color-brand-600: #0f6b54;
-  --color-brand-700: #0b5442;
-  --color-brand-900: #073527;
+  /* StayDesk brand: highland teal, Meskel gold accent, warm neutrals */
+  --color-brand-50: #eaf5f5;
+  --color-brand-100: #cde6e7;
+  --color-brand-600: #0d5c63;
+  --color-brand-700: #0a474d;
+  --color-brand-900: #052a2e;
 
   /* Neutrals carry a faint warm bias so the greys read as chosen, not the
      stock cool zinc. Dark mode + print remap these below. */
@@ -36,11 +36,11 @@ html {
   --color-zinc-800: #ebebee;
   --color-zinc-900: #f6f6f7;
   --color-zinc-950: #ffffff;
-  --color-brand-50: #10312a;
-  --color-brand-100: #154438;
-  --color-brand-600: #189776;
-  --color-brand-700: #41c39e;
-  --color-brand-900: #cdeee0;
+  --color-brand-50: #0e2c2f;
+  --color-brand-100: #133d41;
+  --color-brand-600: #1a8d96;
+  --color-brand-700: #4cc3cb;
+  --color-brand-900: #cfeff1;
   --color-rose-50: #391521;
   --color-rose-200: #5c2537;
   --color-rose-500: #fb7185;
@@ -83,11 +83,11 @@ html {
     --color-zinc-800: #27272a;
     --color-zinc-900: #18181b;
     --color-zinc-950: #09090b;
-    --color-brand-50: #ecf7f2;
-    --color-brand-100: #d2ece0;
-    --color-brand-600: #0f6b54;
-    --color-brand-700: #0b5442;
-    --color-brand-900: #073527;
+    --color-brand-50: #eaf5f5;
+    --color-brand-100: #cde6e7;
+    --color-brand-600: #0d5c63;
+    --color-brand-700: #0a474d;
+    --color-brand-900: #052a2e;
     --color-rose-50: #fff1f2;
     --color-rose-200: #fecdd3;
     --color-rose-500: #f43f5e;

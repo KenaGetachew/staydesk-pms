@@ -219,7 +219,7 @@ const ZATCA_SPECS: Spec[] = [
   { field: "additional_number", label: "Additional number" },
   { field: "environment", label: "Environment (Phase 2)", type: "select",
     options: ["Sandbox", "Simulation", "Production"] },
-  { field: "egs_serial", label: "EGS serial (Phase 2)", hint: "1-Kamra|2-PMS|3-<unit serial>" },
+  { field: "egs_serial", label: "EGS serial (Phase 2)", hint: "1-StayDesk|2-PMS|3-<unit serial>" },
 ]
 
 /** Saudi e-invoicing (ZATCA / FATOORA): seller details the XML needs, what
@@ -596,7 +596,7 @@ function AiAssistantCard({
           <CardTitle>{t("AI assistant (bring your own key)")}</CardTitle>
           <p className="mt-0.5 text-xs text-zinc-400">
             {t(
-              "Kamra Agent for staff. Pick a provider, paste the key, Test. Claude Desktop is MCP (Kamra Agent → Connect your AI) - not an Anthropic key in this form.",
+              "StayDesk Agent for staff. Pick a provider, paste the key, Test. Claude Desktop is MCP (StayDesk Agent → Connect your AI) - not an Anthropic key in this form.",
             )}
           </p>
         </div>
@@ -707,7 +707,7 @@ function AiAssistantCard({
             {t("Never send guest contact details to the AI provider")}
             <span className="mt-0.5 block text-xs font-normal text-zinc-400">
               {t(
-                "When off, phone and ID numbers in tool results are shortened to the last four digits before they leave Kamra.",
+                "When off, phone and ID numbers in tool results are shortened to the last four digits before they leave StayDesk.",
               )}
             </span>
           </span>
@@ -740,7 +740,7 @@ function AiAssistantCard({
         <p className="text-xs text-zinc-400">
           {t("Want Claude the app?")}{" "}
           <a href="/kamra/assistant" className="font-medium text-brand-700 hover:underline">
-            {t("Kamra Agent → Connect your AI")}
+            {t("StayDesk Agent → Connect your AI")}
           </a>
           . {t("Want Claude the model in this chat? Use the OpenRouter preset.")}
         </p>
@@ -842,7 +842,7 @@ export function AgentAccessCard() {
         <p className="text-zinc-600">
           Staff open{" "}
           <Link to="/assistant" className="font-medium text-brand-700 hover:underline">
-            Kamra Agent → Connect your AI
+            StayDesk Agent → Connect your AI
           </Link>{" "}
           and click <strong>Connect Claude</strong>. Claude opens with this
           hotel&apos;s MCP URL filled in; they confirm and sign in as themselves.
@@ -1136,7 +1136,7 @@ export function HurdleRatesCard({ property }: { property: string }) {
             carry the premium automatically and no rate may sell below the
             hurdle. A room-type tier beats the all-types tier. Guardrails
             (floor and ceiling) only bound rates set through set_room_rate -
-            Kamra Agent, MCP or the API - not these premiums, staff seasons
+            StayDesk Agent, MCP or the API - not these premiums, staff seasons
             or quotes.
           </p>
         </div>

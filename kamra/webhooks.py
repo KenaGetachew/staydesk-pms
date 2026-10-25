@@ -581,7 +581,7 @@ def send_test_event(name: str, property: str | None = None) -> dict:
 	doc = _own(WEBHOOK, name, property)
 	if not doc.active:
 		frappe.throw(_("Switch the webhook on first."))
-	envelope_data = {"message": "Test event from Kamra - your endpoint is reachable.",
+	envelope_data = {"message": "Test event from StayDesk - your endpoint is reachable.",
 	                 "webhook": doc.name}
 	d = frappe.get_doc({
 		"doctype": DELIVERY, "property": doc.property, "webhook": doc.name,

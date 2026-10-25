@@ -161,7 +161,7 @@ def registry(property: str):
 		},
 		{
 			"category": "Accounting",
-			"blurb": "Push closed folios to your books - Kamra keeps the "
+			"blurb": "Push closed folios to your books - StayDesk keeps the "
 			         "front office, your ledger keeps compliance.",
 			"cards": [
 				_connector("Accounting export", "export",

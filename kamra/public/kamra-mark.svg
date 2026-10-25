@@ -1,14 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Kamra mark">
-  <!-- Kamra: a door opening into a K. Palette: #1E7B4F primary, #56C589 accent. -->
-  <g fill="none" stroke="#1E7B4F" stroke-width="56" stroke-linejoin="round" stroke-linecap="round">
-    <!-- the door: leaning open bracket -->
-    <path d="M 306 150 L 152 96 L 152 416 L 306 362" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="StayDesk mark">
+  <!-- StayDesk: an arched doorway over the front desk, with the Meskel sun rising inside.
+       Palette: #0D5C63 primary (highland teal), #F2B233 accent (Meskel gold). -->
+  <circle cx="256" cy="258" r="46" fill="#F2B233" />
+  <g fill="none" stroke="#0D5C63" stroke-width="52" stroke-linecap="round" stroke-linejoin="round">
+    <!-- the arch: an Aksum/Lalibela-style doorway -->
+    <path d="M 152 404 L 152 228 A 104 104 0 0 1 360 228 L 360 404" />
+    <!-- the desk: a counter across the threshold -->
+    <path d="M 84 412 L 428 412" />
   </g>
-  <!-- K arms: angled cuts via butt caps -->
-  <g fill="none" stroke="#1E7B4F" stroke-width="64" stroke-linecap="butt">
-    <path d="M 330 256 L 468 106" />
-    <path d="M 330 256 L 468 406" />
-  </g>
-  <!-- the peephole / handle -->
-  <circle cx="272" cy="256" r="23" fill="#56C589" />
 </svg>

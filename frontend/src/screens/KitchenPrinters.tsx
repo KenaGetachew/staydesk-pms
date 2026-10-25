@@ -348,7 +348,7 @@ export default function KitchenPrinters() {
                       {t("Print station (a kitchen screen prints it)")}
                     </option>
                     <option value="Direct IP">
-                      {t("Direct IP (Kamra on the hotel network)")}
+                      {t("Direct IP (StayDesk on the hotel network)")}
                     </option>
                   </select>
                   <span className="mt-1 block text-xs text-zinc-400">
@@ -357,7 +357,7 @@ export default function KitchenPrinters() {
                           "Any printer - USB, network or Bluetooth - attached to a device in the kitchen. On that device, open the kitchen display and pick this printer under Print for.",
                         )
                       : t(
-                          "Kamra sends the ticket straight to the printer's network address. Only works when the Kamra server is on the same network as the printer, not on a cloud server.",
+                          "StayDesk sends the ticket straight to the printer's network address. Only works when the StayDesk server is on the same network as the printer, not on a cloud server.",
                         )}
                   </span>
                 </label>

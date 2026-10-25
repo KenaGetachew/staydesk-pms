@@ -482,8 +482,8 @@
    "label": "Logo"
   },
   {
-   "default": "#0f6b54",
-   "description": "Accent hex (e.g. #0f6b54) for the booking page - buttons, links, highlights.",
+   "default": "#0d5c63",
+   "description": "Accent hex (e.g. #0d5c63) for the booking page - buttons, links, highlights.",
    "fieldname": "brand_accent",
    "fieldtype": "Data",
    "label": "Booking Page Accent"

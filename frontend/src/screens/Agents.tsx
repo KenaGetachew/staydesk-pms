@@ -130,7 +130,7 @@ export default function Agents() {
         <div className="min-w-0">
           <div className="flex items-center gap-2">
             <Sparkles className="size-5 text-brand-600" aria-hidden />
-            <h1 className="text-xl font-semibold tracking-tight">Kamra Agent</h1>
+            <h1 className="text-xl font-semibold tracking-tight">StayDesk Agent</h1>
           </div>
           <p className="mt-0.5 text-sm text-zinc-500">
             Chat here, or connect Claude. Either way it acts as you, within
@@ -283,7 +283,7 @@ export function ActivityTab({ property }: { property: string }) {
         </select>
         <p className="text-xs text-zinc-400">
           {kind === "signins"
-            ? t("Who signed in to and out of Kamra, newest first.")
+            ? t("Who signed in to and out of StayDesk, newest first.")
             : t("Every action on the property, newest first - who did it and what changed.")}
         </p>
       </div>
@@ -514,7 +514,7 @@ export function ConnectTab({ property }: { property: string }) {
           </CardHeader>
           <CardContent>
             <p className="text-sm text-zinc-600">
-              Connect Claude is turned off on this site. On your own Kamra,
+              Connect Claude is turned off on this site. On your own StayDesk,
               every staff member can connect Claude and act within their role.
             </p>
           </CardContent>

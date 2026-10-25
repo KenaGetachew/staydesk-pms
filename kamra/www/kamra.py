@@ -19,11 +19,11 @@ def get_context(context):
 	if not os.path.exists(index_path):
 		frappe.throw(
 			frappe._(
-				"Kamra front-end is not built. Run "
+				"StayDesk front-end is not built. Run "
 				"<code>cd apps/kamra/frontend && yarn install && yarn build</code> "
 				"(Frappe Cloud runs this automatically on deploy)."
 			),
-			title="Kamra not built",
+			title="StayDesk not built",
 		)
 
 	with open(index_path, encoding="utf-8") as f:  # nosemgrep: frappe-security-file-traversal -- serves the app's own built index.html from a fixed app path, not user input

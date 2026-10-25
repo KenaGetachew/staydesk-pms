@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-label="StayDesk PMS logo">
+  <rect width="1024" height="1024" fill="#FFFFFF" />
+  <g transform="translate(256 90)"><circle cx="256" cy="258" r="46" fill="#F2B233" /><g fill="none" stroke="#0D5C63" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"><path d="M 152 404 L 152 228 A 104 104 0 0 1 360 228 L 360 404" /><path d="M 84 412 L 428 412" /></g></g>
+  <text x="512" y="760" text-anchor="middle" font-family="Poppins, 'Avenir Next', Montserrat, 'Century Gothic', sans-serif"
+        font-weight="600" font-size="150"><tspan fill="#2B1D14">Stay</tspan><tspan fill="#0D5C63">Desk</tspan></text>
+  <g fill="#0D5C63" font-family="Poppins, 'Avenir Next', Montserrat, sans-serif" font-weight="600" font-size="52" letter-spacing="34">
+    <text x="529" y="870" text-anchor="middle">PMS</text>
+  </g>
+</svg>

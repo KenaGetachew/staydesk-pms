@@ -1231,7 +1231,7 @@ export default function PublicBooking() {
         )}
 
         <p className="mt-10 text-center text-xs text-zinc-400">
-          Powered by Kamra - the open-source, agent-ready hotel PMS
+          Powered by StayDesk - the open-source, agent-ready hotel PMS
         </p>
       </div>
 

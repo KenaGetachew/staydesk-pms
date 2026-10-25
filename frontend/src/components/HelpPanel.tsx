@@ -134,7 +134,7 @@ export default function HelpPanel() {
             {msgs.length === 0 && (
               <div className="space-y-2">
                 <p className="text-sm text-zinc-600">
-                  Ask how to do anything in Kamra - I'll walk you through it.
+                  Ask how to do anything in StayDesk - I'll walk you through it.
                 </p>
                 {SUGGESTIONS.map((s) => (
                   <button

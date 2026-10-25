@@ -10,7 +10,7 @@ import { useT } from "../lib/i18n"
 const inputCls =
   "w-full rounded border border-[#E2E8F0] bg-[#ffffff] px-3 py-2 text-sm " +
   "text-[#191c1e] placeholder:text-[#6f7a71] " +
-  "focus:outline-2 focus:outline-offset-1 focus:outline-[#1E7B4F]"
+  "focus:outline-2 focus:outline-offset-1 focus:outline-[#0D5C63]"
 
 const DEMO_ACCOUNTS = [
   { label: "System Admin", usr: "admin@kamra.local", pwd: "KamraAdmin1!" },
@@ -66,7 +66,7 @@ export default function Login(props: { onSuccess: () => void }) {
       className="flex min-h-[100dvh] flex-col items-center justify-center bg-[#f7f9fb] px-4"
       style={{ colorScheme: "light" }}
     >
-      <div className="fixed inset-x-0 top-0 h-[5px] bg-[#1C3F38]" aria-hidden />
+      <div className="fixed inset-x-0 top-0 h-[5px] bg-[#0D5C63]" aria-hidden />
       <div className="w-full max-w-sm">
         {sessionEnded && (
           <p className="mb-4 rounded border border-[#fde68a] bg-[#fffbeb] px-4 py-2.5 text-center text-sm text-[#92400e]">
@@ -74,13 +74,13 @@ export default function Login(props: { onSuccess: () => void }) {
           </p>
         )}
         <div className="mb-6 flex flex-col items-center gap-2">
-          <img src={asset("kamra-mark.svg")} alt="Kamra" className="size-16" />
+          <img src={asset("staydesk-mark.svg")} alt="StayDesk" className="size-16" />
           <span
-            className="text-2xl font-semibold tracking-[0.02em] text-[#1C3F38]"
+            className="text-2xl font-semibold tracking-[0.02em] text-[#2B1D14]"
             style={{ fontFamily: "Montserrat, ui-sans-serif, system-ui, sans-serif" }}
           >
-            kamra
-            <span className="ml-1.5 align-middle text-[10px] font-semibold tracking-[0.4em] text-[#1E7B4F]">
+            Stay<span className="text-[#0D5C63]">Desk</span>
+            <span className="ml-1.5 align-middle text-[10px] font-semibold tracking-[0.4em] text-[#0D5C63]">
               PMS
             </span>
           </span>
@@ -148,7 +148,7 @@ export default function Login(props: { onSuccess: () => void }) {
           )}
 
           <Button
-            className="w-full justify-center rounded bg-[#1E7B4F] py-2 text-white hover:bg-[#00613a] focus-visible:outline-[#1E7B4F]"
+            className="w-full justify-center rounded bg-[#0D5C63] py-2 text-white hover:bg-[#0a474d] focus-visible:outline-[#0D5C63]"
             disabled={busy || !usr || !pwd}
             type="submit"
           >
@@ -170,7 +170,7 @@ export default function Login(props: { onSuccess: () => void }) {
                 key={a.usr}
                 disabled={busy}
                 onClick={() => submit(a.usr, a.pwd)}
-                className="rounded border border-[#E2E8F0] bg-[#ffffff] px-2 py-1.5 text-xs font-medium text-[#3f4941] hover:border-[#1E7B4F] hover:text-[#00613a]"
+                className="rounded border border-[#E2E8F0] bg-[#ffffff] px-2 py-1.5 text-xs font-medium text-[#3f4941] hover:border-[#0D5C63] hover:text-[#0a474d]"
               >
                 {t(a.label)}
               </button>
@@ -180,7 +180,7 @@ export default function Login(props: { onSuccess: () => void }) {
         )}
         {version && (
           <p className="mt-6 text-center text-[11px] text-[#6f7a71]">
-            Kamra PMS v{version}
+            StayDesk PMS v{version}
           </p>
         )}
       </div>
